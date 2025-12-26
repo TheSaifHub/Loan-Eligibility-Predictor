@@ -1,7 +1,7 @@
 # ===================== 1. LOAD DATA =====================
 import pandas as pd
 
-df = pd.read_csv("model_ready_data.csv")
+df = pd.read_csv("data/model_ready_data.csv")
 
 # ===================== 2. SPLIT FEATURES & TARGET =====================
 X = df.drop("Loan_Status", axis=1)
@@ -25,7 +25,7 @@ X_train[num_cols] = pt.fit_transform(X_train[num_cols])
 X_test[num_cols] = pt.transform(X_test[num_cols])
 
 # Save PowerTransformer
-joblib.dump(pt, "power_transformer.pkl")
+joblib.dump(pt, "pickel_files/power_transformer.pkl")
 
 # ===================== 4. SCALING =====================
 from sklearn.preprocessing import StandardScaler
@@ -36,7 +36,7 @@ X_train[num_cols] = scaler.fit_transform(X_train[num_cols])
 X_test[num_cols] = scaler.transform(X_test[num_cols])
 
 # Save Scaler
-joblib.dump(scaler, "scaler.pkl")
+joblib.dump(scaler, "pickel_files/scaler.pkl")
 
 # ===================== 5. MODEL TRAINING =====================
 from sklearn.linear_model import LogisticRegression
@@ -53,6 +53,6 @@ print("Accuracy:", accuracy_score(y_test, y_pred))
 print(classification_report(y_test, y_pred))
 
 # ===================== 7. SAVE MODEL =====================
-joblib.dump(model, "loan_model.pkl")
+joblib.dump(model, "pickel_files/loan_model.pkl")
 
 print("✅ Model, scaler, and transformer saved successfully.")
