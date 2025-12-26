@@ -139,14 +139,14 @@ Visual indicators for probability and risk
 
 🚀 How to Run the Project
 
-1️⃣ Clone the Repository
-git clone https://github.com/TheSaifHub/Loan-Eligibility-Predictor.git
+1️⃣ Clone the Repository:
+git clone https://github.com/TheSaifHub/Loan-Eligibility-Predictor.git ->
 cd Loan-Eligibility-Predictor
 
-2️⃣ Install Dependencies
+2️⃣ Install Dependencies:
 pip install -r requirements.txt
 
-3️⃣ Run the Streamlit App
+3️⃣ Run the Streamlit App:
 python -m streamlit run app.py
 
 -----------------------------------------------------------------------------------------------------------------
