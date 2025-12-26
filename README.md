@@ -138,9 +138,9 @@ Visual indicators for probability and risk
 -----------------------------------------------------------------------------------------------------------------
 
 🚀 How to Run the Project
+
 1️⃣ Clone the Repository
 git clone https://github.com/TheSaifHub/Loan-Eligibility-Predictor.git
-
 cd Loan-Eligibility-Predictor
 
 2️⃣ Install Dependencies
